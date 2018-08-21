@@ -1,11 +1,5 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
-$show-home-image: true;
-$home-image: url('../img/background.jpg');
-$background-opacity: 0.9;
 @import 'config';
 @import 'menu';
-@import 'mobile';
 * {
     box-sizing: border-box;
 }
@@ -13,7 +7,7 @@ $background-opacity: 0.9;
 body {
     @include background;
     background: $primary-color;
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -56,7 +50,7 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 4rem;
-    height: 100vh;
+    min-height: calc(100vh - 60px);
     .icons {
         margin-top: 1rem;
         a {
@@ -74,3 +68,57 @@ main {
         opacity: 0.3;
     }
 }
+
+main#about {
+    .about-info {
+        display: grid;
+        grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+        grid-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: justify;
+        .bio-image {
+            grid-area: bioimage;
+            margin: auto;
+            border: 3px solid $secondary-color;
+            border-radius: 50%;
+        }
+        .bio {
+            grid-area: bio;
+            font-size: 1.3rem;
+        }
+        .job-1 {
+            grid-area: job1;
+        }
+        .job-2 {
+            grid-area: job2;
+        }
+        .job-3 {
+            grid-area: job3;
+        }
+        .job {
+            background: lighten($primary-color, 5);
+            padding: 0.5rem;
+            border-bottom: $secondary-color 5px solid;
+            text-align: center;
+        }
+    }
+}
+
+#main-footer {
+    height: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 20);
+    color: set-text-color($primary-color);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 5px;
+    &>p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@import 'mobile';

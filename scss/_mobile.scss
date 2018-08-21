@@ -6,13 +6,15 @@
 
 // Tablets & Small Laptops
 @include mediaMedium {
-    main {
-        flex-direction: row;
+    main#home {
         align-items: center;
         text-align: center;
-        .lg-heading {
-            line-height: 1;
-            margin-bottom: 2rem;
+        h1 {
+            &.lg-heading {
+                line-height: 1;
+                margin-bottom: 2rem;
+                font-size: 3.4rem;
+            }
         }
     }
     ul.menu-nav,
@@ -35,6 +37,13 @@
             background: url('../img/portrait_small.jpg');
             width: 150px;
             height: 150px;
+        }
+    }
+    main#about {
+        .about-info {
+            grid-template-areas: "bioimage" 'bio' 'job1' 'job2' 'job3';
+            grid-template-columns: 1fr;
+            text-align: center;
         }
     }
 }
