@@ -1,10 +1,10 @@
-@import 'config';
-@import 'menu';
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url('../img/background.jpg');
 $background-opacity: 0.9;
+@import 'config';
+@import 'menu';
 * {
     box-sizing: border-box;
 }
@@ -68,5 +68,8 @@ main {
     }
     &#home {
         overflow: hidden;
+    }
+    &.back {
+        opacity: 0.3;
     }
 }
