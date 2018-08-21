@@ -5,6 +5,7 @@ $home-image: url('../img/background.jpg');
 $background-opacity: 0.9;
 @import 'config';
 @import 'menu';
+@import 'mobile';
 * {
     box-sizing: border-box;
 }
