@@ -1,21 +1,29 @@
 // Widescreens
-@include mediaXLarge {}
+@include mediaXLarge {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 // Desktops & Laptops
-@include mediaLarge {}
+@include mediaLarge {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 // Tablets & Small Laptops
 @include mediaMedium {
+    h1 {
+        &.lg-heading {
+            line-height: 1;
+            margin-bottom: 2rem;
+            font-size: 3.4rem;
+        }
+    }
     main#home {
         align-items: center;
         text-align: center;
-        h1 {
-            &.lg-heading {
-                line-height: 1;
-                margin-bottom: 2rem;
-                font-size: 3.4rem;
-            }
-        }
     }
     ul.menu-nav,
     div.menu-branding {
@@ -46,7 +54,20 @@
             text-align: center;
         }
     }
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // Smartphones
-@include mediaSmall {}
+@include mediaSmall {
+    main {
+        padding: 2rem;
+    }
+    h1.lg-heading {
+        font-size: 2.9rem;
+    }
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
