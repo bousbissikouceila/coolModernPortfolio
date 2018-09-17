@@ -3,6 +3,7 @@ $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url('../img/background.jpg');
 $background-opacity: 0.9;
+$orientation: 0;
 @mixin easeOut {
     transition: all 500ms ease-out;
 }
@@ -37,6 +38,18 @@ $background-opacity: 0.9;
     }
 }
 
+//set scrollbar color
+@function scrollbar-color($color) {
+    @if(lightness($color)>40) {
+        @return darken($primary-color,
+        50);
+    }
+    @else {
+        @return lighten($primary-color,
+        50);
+    }
+}
+
 // Media Query Mixins
 @mixin mediaSmall {
     @media screen and (max-width: 500px) {
@@ -45,7 +58,7 @@ $background-opacity: 0.9;
 }
 
 @mixin mediaMedium {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) and (orientation: portrait) {
         @content;
     }
 }

@@ -1,20 +1,20 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Responsive Portfolio website",
-  "main": "index.js",
-  "homepage": "https://kouceilaBousbissi.github.io/coolModernPortfolio",
-  "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
-  },
-  "keywords": [
-    "portfolio"
-  ],
-  "author": "Kouceïla BOUSBISSI",
-  "license": "MIT",
-  "dependencies": {
-    "gh-pages": "^1.2.0",
-    "node-sass": "^4.9.3"
-  }
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "Responsive Portfolio website",
+    "main": "index.js",
+    "homepage": "https://bousbissikouceila.github.io/coolModernPortfolio",
+    "scripts": {
+        "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+        "deploy": "gh-pages -d dist"
+    },
+    "keywords": [
+        "portfolio"
+    ],
+    "author": "Kouceïla BOUSBISSI",
+    "license": "MIT",
+    "dependencies": {
+        "gh-pages": "^1.2.0",
+        "node-sass": "^4.9.3"
+    }
 }
