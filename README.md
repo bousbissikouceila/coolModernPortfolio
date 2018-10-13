@@ -3,7 +3,7 @@
 > This project is a simple cool modern portfolio that I use for now
 
 ## See it
-[Portfolio Page](https://bousbissikouceila.github.io/coolModernPortfolio "Take a look")
+[Portfolio Page](https://kouceila-bousbissi-portfolio.netlify.com/ "Take a look")
 
 ## Info
 
