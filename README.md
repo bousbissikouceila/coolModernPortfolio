@@ -4,7 +4,7 @@
 > This project is a simple cool modern portfolio that I use for now
 
 ## See it
-[Portfolio Page](https://kouceila-bousbissi-portfolio.netlify.com/ "Take a look")
+[Portfolio Page](https://kouceilabousbissi.netlify.com/ "Take a look")
 
 ## Info
 

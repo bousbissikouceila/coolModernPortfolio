@@ -64,7 +64,7 @@ function scss() {
             includePaths: ['.'],
             onError: console.error.bind(console, 'Sass error:')
         }))
-        .pipe(dest('src/css'));
+        .pipe(dest('src/css'))
 }
 
 // Optimize js

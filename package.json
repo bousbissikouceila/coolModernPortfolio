@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Responsive Portfolio website",
     "main": "index.js",
-    "homepage": "https://kouceila-bousbissi-portfolio.netlify.com/",
+    "homepage": "https://kouceilabousbissi.netlify.com/",
     "scripts": {
         "sass": "node-sass -w src/style/scss/ -o src/style/ --recursive"
     },
@@ -14,9 +14,9 @@
     "license": "MIT",
     "devDependencies": {
         "gulp": "^4.0.2",
-        "gulp-changed": "^4.0.0",
+        "gulp-changed": "^4.0.2",
         "gulp-clean-css": "^4.2.0",
-        "gulp-imagemin": "^6.0.0",
+        "gulp-imagemin": "^6.1.1",
         "gulp-minify": "^3.1.0",
         "gulp-sass": "^4.0.2"
     },

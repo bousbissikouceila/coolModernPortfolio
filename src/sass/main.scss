@@ -134,6 +134,7 @@ main#about {
         height: 220px;
         border: 2px #fff solid;
         border-radius: 2px;
+        @include easeOut;
         &:hover {
             opacity: 0.5;
             border-color: $secondary-color;
@@ -149,6 +150,7 @@ main#about {
     border: 0;
     margin-bottom: 0.3rem;
     border-radius: 5px;
+    @include easeOut;
     &:hover {
         background: $secondary-color;
         color: set-text-color($secondary-color);
