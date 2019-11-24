@@ -182,12 +182,10 @@ main#about {
     }
     .contact-choice {
         display: flex;
-        // flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-evenly;
-        align-items: baseline;
+        align-items: flex-start;
         margin-top: 1rem;
-        // background-color: red;
         padding: 0;
         .contact-info {
             width: 40%;

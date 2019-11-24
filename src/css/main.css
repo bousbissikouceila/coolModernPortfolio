@@ -251,7 +251,7 @@ main#about .about-info {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: baseline;
+  align-items: flex-start;
   margin-top: 1rem;
   padding: 0; }
   #contact .contact-choice .contact-info {
