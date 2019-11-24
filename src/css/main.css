@@ -493,4 +493,11 @@ main#about .about-info {
         #contact .contact-choice #contact-form .input-collect #input-textarea {
           width: 100%; }
         #contact .contact-choice #contact-form .input-collect input {
-          width: 100% !important; } }
+          width: 100% !important; }
+  #contact #send {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between; }
+    #contact #send .send-btn {
+      margin-left: 0;
+      margin-top: 2rem; } }
