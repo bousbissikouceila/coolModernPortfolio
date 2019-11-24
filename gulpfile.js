@@ -57,7 +57,7 @@ function css() {
 // compile sass to regular css without minifying it
 function scss() {
     return src('./src/sass/main.scss')
-        .pipe(changed('src/css'))
+        .pipe(changed('./src/css'))
         .pipe(sass({
             outputStyle: 'nested',
             precision: 10,

@@ -243,24 +243,139 @@ main#about .about-info {
   background-color: #c4c3c3;
   color: #444; }
 
-.boxes {
+#contact p.contact-intro {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.15rem; }
+
+#contact .contact-choice {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 1.5rem;
-    border: 3px solid #fff;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    transition: all 500ms ease-out; }
-    .boxes div:hover {
-      padding: 0.5rem 1.5rem;
-      background: #eece1a;
-      color: #000; }
-      .boxes div:hover span {
-        color: #fff; }
+  align-items: baseline;
+  margin-top: 1rem;
+  padding: 0; }
+  #contact .contact-choice .contact-info {
+    width: 40%;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 1.1rem;
+    transition: all 500ms ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left; }
+    #contact .contact-choice .contact-info div.contact-element {
+      width: fit-content;
+      padding: .5rem 0;
+      margin: .5rem 0;
+      font-weight: 350;
+      transition: all 500ms ease-out; }
+      #contact .contact-choice .contact-info div.contact-element i {
+        transition: all 500ms ease-out;
+        font-size: 1.5rem;
+        margin: 0 .8rem; }
+        #contact .contact-choice .contact-info div.contact-element i.fa-phone {
+          transform: rotate(90deg); }
+      #contact .contact-choice .contact-info div.contact-element:hover {
+        color: #eece1a; }
+        #contact .contact-choice .contact-info div.contact-element:hover a {
+          color: #eece1a; }
+        #contact .contact-choice .contact-info div.contact-element:hover i {
+          transform: rotate(360deg);
+          color: #fff; }
+          #contact .contact-choice .contact-info div.contact-element:hover i.fa-phone {
+            transform: rotate(450deg); }
+  #contact .contact-choice #contact-form {
+    display: block;
+    width: 60%;
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+    #contact .contact-choice #contact-form .input-collect {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0; }
+      #contact .contact-choice #contact-form .input-collect .simple-input {
+        display: block;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        height: 100%; }
+      #contact .contact-choice #contact-form .input-collect .input-group {
+        position: relative;
+        height: 100%; }
+        #contact .contact-choice #contact-form .input-collect .input-group input {
+          display: block;
+          width: 95%;
+          height: 2.35rem;
+          outline: none;
+          padding: .5rem 0 .5rem 1rem;
+          cursor: text;
+          border: 1px #fff;
+          border-radius: 5px;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 1rem; }
+        #contact .contact-choice #contact-form .input-collect .input-group input:valid + #label {
+          font-size: .8rem;
+          top: -1.15rem;
+          left: 6px;
+          color: #eece1a; }
+        #contact .contact-choice #contact-form .input-collect .input-group #message {
+          width: 100%;
+          outline: none;
+          height: 100%;
+          padding: .5rem .5rem .5rem 1rem;
+          border: 1px #fff;
+          border-radius: 5px;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 1rem;
+          line-height: 1.2rem; }
+          #contact .contact-choice #contact-form .input-collect .input-group #message:valid + #label {
+            font-size: .7rem;
+            top: -0.95rem;
+            left: 6px;
+            color: #eece1a; }
+        #contact .contact-choice #contact-form .input-collect .input-group #label {
+          position: absolute;
+          top: 5px;
+          left: 16px;
+          color: #4d4d4d;
+          transition: all 500ms ease-out;
+          cursor: text; }
+      #contact .contact-choice #contact-form .input-collect #input-textarea {
+        display: block;
+        margin-left: 0;
+        padding: 0;
+        width: calc(100%/2);
+        height: 9rem;
+        cursor: pointer; }
+    #contact .contact-choice #contact-form #send {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      margin-top: .5rem; }
+      #contact .contact-choice #contact-form #send .recaptcha {
+        display: block; }
+      #contact .contact-choice #contact-form #send .send-btn {
+        display: block;
+        margin-left: 2rem;
+        padding: .7rem 1rem;
+        background-color: #eece1a;
+        color: #fff;
+        outline: none;
+        border: 2px #eece1a;
+        border-radius: 10px;
+        transition: all 500ms ease-out;
+        cursor: pointer; }
+        #contact .contact-choice #contact-form #send .send-btn:hover {
+          color: #eece1a;
+          background: #fff; }
 
 #footer {
   height: 40px;
@@ -277,9 +392,21 @@ main#about .about-info {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  #contact .contact-choice {
+    flex-direction: column-reverse;
+    align-items: center; }
+    #contact .contact-choice .contact-info {
+      width: 100%; }
+    #contact .contact-choice #contact-form {
+      width: 100%;
+      margin-bottom: 1rem; }
+      #contact .contact-choice #contact-form .input-collect .simple-input {
+        width: 100%; }
+      #contact .contact-choice #contact-form .input-collect #input-textarea {
+        width: 100%; } }
 
-@media screen and (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 768px) and (orientation: portrait) {
   h1.lg-heading {
     line-height: 1;
     margin-bottom: 2rem;
@@ -310,10 +437,36 @@ main#about .about-info {
     text-align: center; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
-  .boxes div {
-    font-size: 1.3rem;
-    text-align: center;
-    padding: 1.2rem 1rem; } }
+  #contact .contact-choice {
+    flex-direction: column-reverse;
+    align-items: center; }
+    #contact .contact-choice .contact-info {
+      width: 100%; }
+    #contact .contact-choice #contact-form {
+      width: 100%;
+      margin-bottom: 1rem; }
+      #contact .contact-choice #contact-form .input-collect .simple-input {
+        width: 100%; }
+      #contact .contact-choice #contact-form .input-collect #input-textarea {
+        width: 100%; } }
+
+@media (max-width: 768px) and (orientation: landscape) {
+  main#about .about-info {
+    grid-template-areas: "bioimage" 'bio' 'education1' 'education2' 'education3';
+    grid-template-columns: 1fr;
+    text-align: center; }
+  #contact .contact-choice {
+    flex-direction: column-reverse;
+    align-items: center; }
+    #contact .contact-choice .contact-info {
+      width: 100%; }
+    #contact .contact-choice #contact-form {
+      width: 100%;
+      margin-bottom: 1rem; }
+      #contact .contact-choice #contact-form .input-collect .simple-input {
+        width: 100%; }
+      #contact .contact-choice #contact-form .input-collect #input-textarea {
+        width: 100%; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -325,7 +478,19 @@ main#about .about-info {
     main h2.sm-heading {
       font-size: 1.2rem;
       text-align: center; }
-    main .boxes div {
-      padding: .5rem .9rem;
-      font-size: 1rem;
-      text-align: center; } }
+  #contact .contact-choice {
+    flex-direction: column-reverse;
+    align-items: center; }
+    #contact .contact-choice .contact-info {
+      width: 100%; }
+    #contact .contact-choice #contact-form {
+      width: 100%;
+      margin-bottom: 1.5rem; }
+      #contact .contact-choice #contact-form .input-collect {
+        flex-direction: column; }
+        #contact .contact-choice #contact-form .input-collect .simple-input {
+          width: 100%; }
+        #contact .contact-choice #contact-form .input-collect #input-textarea {
+          width: 100%; }
+        #contact .contact-choice #contact-form .input-collect input {
+          width: 100% !important; } }

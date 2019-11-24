@@ -10,7 +10,7 @@ body {
     color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: $font-family;
     line-height: 1.5;
     &::-webkit-scrollbar {
         width: 6px;
@@ -175,24 +175,167 @@ main#about {
 }
 
 //contact page
-.boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1rem;
-    div {
-        font-size: 1.5rem;
-        border: 3px solid #fff;
-        padding: 1.5rem 2.5rem;
-        margin-bottom: 3rem;
-        @include easeOut;
-        &:hover {
-            padding: 0.5rem 1.5rem;
-            background: $secondary-color;
-            color: set-text-color($secondary-color);
-            span {
-                color: #fff;
+#contact {
+    p.contact-intro {
+        font-family: $font-family;
+        font-size: 1.15rem;
+    }
+    .contact-choice {
+        display: flex;
+        // flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: baseline;
+        margin-top: 1rem;
+        // background-color: red;
+        padding: 0;
+        .contact-info {
+            width: 40%;
+            margin-left: 0;
+            padding-left: 0;
+            font-size: 1.1rem;
+            @include easeOut;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: left;
+            //margin-right: 5rem;
+            div.contact-element {
+                width: fit-content;
+                padding: .5rem 0;
+                margin: .5rem 0;
+                font-weight: 350;
+                @include easeOut;
+                i {
+                    @include easeOut;
+                    font-size: 1.5rem;
+                    margin: 0 .8rem;
+                    &.fa-phone {
+                        transform: rotate(90deg);
+                    }
+                }
+                &:hover {
+                    color: $secondary-color;
+                    a {
+                        color: $secondary-color;
+                    }
+                    i {
+                        transform: rotate(360deg);
+                        color: set-text-color($primary-color);
+                        &.fa-phone {
+                            transform: rotate(450deg);
+                        }
+                    }
+                }
+            }
+        }
+        #contact-form {
+            display: block;
+            width: 60%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            // background-color: black;
+            .input-collect {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                // flex-wrap: wrap;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                .simple-input {
+                    display: block;
+                    width: 50%;
+                    margin: 0;
+                    padding: 0;
+                    height: 100%;
+                }
+                .input-group {
+                    position: relative;
+                    height: 100%;
+                    input {
+                        display: block;
+                        width: 95%;
+                        height: 2.35rem;
+                        outline: none;
+                        padding: .5rem 0 .5rem 1rem;
+                        cursor: text;
+                        border: 1px #fff;
+                        border-radius: 5px;
+                        font-family: $font-family;
+                        font-size: 1rem;
+                    }
+                    input:valid+#label {
+                        font-size: .8rem;
+                        top: -1.15rem;
+                        left: 6px;
+                        color: $secondary-color;
+                    }
+                    #message {
+                        width: 100%;
+                        outline: none;
+                        height: 100%;
+                        padding: .5rem .5rem .5rem 1rem;
+                        border: 1px #fff;
+                        border-radius: 5px;
+                        font-family: $font-family;
+                        font-size: 1rem;
+                        line-height: 1.2rem;
+                        &:valid+#label {
+                            font-size: .7rem;
+                            top: -0.95rem;
+                            left: 6px;
+                            color: $secondary-color;
+                        }
+                    }
+                    #label {
+                        position: absolute;
+                        top: 5px;
+                        left: 16px;
+                        color: #4d4d4d;
+                        @include easeOut;
+                        cursor: text;
+                        // font-family: $font-family;
+                    }
+                }
+                #input-textarea {
+                    display: block;
+                    margin-left: 0;
+                    padding: 0;
+                    width: calc(100%/2);
+                    height: 9rem;
+                    cursor: pointer;
+                }
+            }
+            #send {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                width: 100%;
+                // background: blue;
+                margin-top: .5rem;
+                .recaptcha {
+                    display: block;
+                }
+                .send-btn {
+                    display: block;
+                    margin-left: 2rem;
+                    padding: .7rem 1rem;
+                    background-color: $secondary-color;
+                    color: #fff;
+                    outline: none;
+                    border: 2px $secondary-color;
+                    border-radius: 10px;
+                    @include easeOut;
+                    cursor: pointer;
+                    &:hover {
+                        color: $secondary-color;
+                        background: #fff;
+                    }
+                }
             }
         }
     }

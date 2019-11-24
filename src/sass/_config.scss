@@ -1,6 +1,11 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 //$secondary-color: #1a87ee;
+$font-family: "Segoe UI",
+Tahoma,
+Geneva,
+Verdana,
+sans-serif;
 $show-home-image: true;
 $home-image: url('../img/background.jpg');
 $background-opacity: 0.9;
@@ -58,8 +63,14 @@ $orientation: 0;
     }
 }
 
-@mixin mediaMedium {
-    @media screen and (max-width: 768px) and (orientation: portrait) {
+@mixin mediaMediumPortrait {
+    @media (max-width: 768px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin mediaMediumLandscape {
+    @media (max-width: 768px) and (orientation: landscape) {
         @content;
     }
 }

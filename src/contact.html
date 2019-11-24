@@ -4,9 +4,17 @@
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126618596-1"></script>
-    <script>window.dataLayer = window.dataLayer || [];function gtag() {dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-126618596-1');</script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-126618596-1');
+    </script>
     <meta charset="UTF-8">
-    
+
     <meta name="description" content="How to contact BOUSBISSI Kouceïla">
     <meta name="keywords" content="Kouceïla,kouceila,BOUSBISSI,bousbissi,kouceila bousbissi,bousbissi kouceila">
     <meta name="author" content="Kouceïla BOUSBISSI">
@@ -14,7 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Meta for Search engines -->
     <meta name="robots" content="none">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="https://github.com/favicon.ico" type="image/x-icon">
     <title>Contact Me</title>
@@ -52,15 +60,46 @@
         <h1 class="lg-heading">Contact
             <span class="text-secondary">Me</span>
         </h1>
-        <h2 class="sm-heading">This is how you can reach me...</h2>
-        <div class="boxes">
-            <div>
-                <span class="text-secondary">Email: </span> kouceila.bousbissi@gmail.com</div>
-
-            <div>
-                <span class="text-secondary">Phone: </span>(+213) 551 854 126</div>
-            <div>
-                <span class="text-secondary">Address: </span>Béjaïa, Algeria</div>
+        <p class="contact-intro">You're interested in a collaboration, you've a proposition to make or whatever you wanna reach me for. This is how you can reach me...</p>
+        <div class="contact-choice">
+            <div class="contact-info">
+                <div class="contact-element">
+                    <span class="text-secondary"><i class="fal fa-at"></i> </span> kouceila.bousbissi@gmail.com</div>
+                <div class="contact-element">
+                    <a href="tel:+213551854126">
+                        <span class="text-secondary"><i class="fal fa-phone"></i> </span>(+213) 551 854 126</a>
+                </div>
+                <div class="contact-element">
+                    <span class="text-secondary"><i class="fal fa-map-marked-alt"></i> </span>Béjaïa, Algeria</div>
+            </div>
+            <div id="contact-form">
+                <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+                    <div class="input-collect">
+                        <div class="simple-input">
+                            <p class="input-group">
+                                <input type="text" name="name" id="name" required/>
+                                <label id="label" for="name">Enter Your Name</label>
+                            </p>
+                            <p class="input-group">
+                                <input id="email" type="text" name="email" required/>
+                                <label id="label" for="email">Enter Your Email</label>
+                            </p>
+                            <p class="input-group">
+                                <input type="text" name="subject" id="subject" required/>
+                                <label id="label" for="subject">Enter Subject</label>
+                            </p>
+                        </div>
+                        <p class="input-group" id="input-textarea">
+                            <textarea wrap="soft" name="message" id="message" required></textarea>
+                            <label id="label" for="message">Enter a Message</label>
+                        </p>
+                    </div>
+                    <div id="send">
+                        <div class="recaptcha" data-netlify-recaptcha="true"></div>
+                        <button type="submit" class="send-btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
     <footer id="footer">
